@@ -1,4 +1,4 @@
-# ConverMe app
+# ConvertMe app
 Application to convert .docx files to .odt files. Written with VueJS + electron.
 
 # How to use
