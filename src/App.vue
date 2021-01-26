@@ -1,30 +1,76 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+     <nav class="main-nav">
+     <div class="logo_text">
+       <router-link class="nav_link" to="/">ConvertMe</router-link>
+     </div>
+     <Burger></Burger>
+   </nav>
+   <Sidebar>
+     <ul class="sidebar-panel-nav">
+       <li><router-link class="nav_link" to="/">Главная</router-link></li>
+       <li><router-link class="nav_link" to="/choose">Конвертация .docx в .odt</router-link></li>
+       <li><router-link class="nav_link" to="/help">Помощь</router-link></li>
+     </ul>
+   </Sidebar>
+  <router-view></router-view>
+</div>
 </template>
+<script>
+import Burger from './components/menu/Burger';
+import Sidebar from './components/menu/Sidebar';
 
+export default {
+ name: 'app',
+ components: {
+   Burger,
+   Sidebar
+ }
+}
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html {
+  height: 100%;
+  overflow:hidden;
+  background: #373737;
 }
 
-#nav {
-  padding: 30px;
-}
+body {
+  border: 0; margin: 0; padding: 0;
+  font-family: 'Open Sans';
+  height: 100%;
 
-#nav a {
+ }
+
+.logo_text {
+  align-self: center;
+  color: #ffffff;
   font-weight: bold;
-  color: #2c3e50;
+  font-family: 'Open Sans'
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.8rem;
+}
+
+ul.sidebar-panel-nav {
+    list-style-type: none;
+}
+
+.nav_link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: block;
+    padding-bottom: 0.5em;
+}
+ul.sidebar-panel-nav > li > .nav_link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding-bottom: 0.5em;
 }
 </style>
