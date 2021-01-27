@@ -2,13 +2,13 @@
   <div id="nav">
      <nav class="main-nav">
      <div class="logo_text">
-       <router-link class="nav_link_text" @click="$router.replace({path:'/'})">ConvertMe</router-link>
+       <router-link class="nav_link_text" @click="$router.replace({path:'/'})" exact>ConvertMe</router-link>
      </div>
      <Burger></Burger>
    </nav>
    <Sidebar>
      <ul class="sidebar-panel-nav">
-       <li><router-link class="nav_link" to="/">Главная</router-link></li>
+       <li><router-link class="nav_link" to="/" exact>Главная</router-link></li>
        <li><router-link class="nav_link" to="/choose">Конвертация .docx в .odt</router-link></li>
        <li><router-link class="nav_link" to="/help">Помощь</router-link></li>
      </ul>
