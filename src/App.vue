@@ -2,7 +2,7 @@
   <div id="nav">
      <nav class="main-nav">
      <div class="logo_text">
-       <router-link class="nav_link" to="/">ConvertMe</router-link>
+       <router-link class="nav_link_text" @click="$router.replace({path:'/'})">ConvertMe</router-link>
      </div>
      <Burger></Burger>
    </nav>
@@ -59,10 +59,10 @@ ul.sidebar-panel-nav {
     list-style-type: none;
 }
 
-.nav_link {
+.nav_link, .nav_link_text {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     display: block;
     padding-bottom: 0.5em;
 }

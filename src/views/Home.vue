@@ -37,10 +37,38 @@ export default {
   left: 50%;
   transform: translate(-50%, 100%);
 }
-@media screen and (min-width: 900px) {
-  .main_page_text {
-    transform: translate(-50%, 150%);
+@media (min-width: 1901px) {
+.main_page_text{
+  font-size: 7em;
   }
+}
+
+@media (min-width: 1601px) and (max-width: 1920px) {
+  .main_page_text{
+  font-size: 6em;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1600px) {
+  .main_page_text{
+  font-size: 5em;
+  }
+}
+@media (min-width: 300px) and (max-width: 900px) {
+  .main_page_text{
+  font-size: 4em;
+  }
+}
+@media (min-width: 300px) and (max-width: 900px) {
+  .main_page_text{
+  font-size: 4em;
+  }
+}
+@media (min-height: 400px) {
+  .main_page_text {
+    display: block;
+  }
+  
 }
 .wrapper{
   position: fixed;
