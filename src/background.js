@@ -15,9 +15,10 @@ async function createWindow() {
   const win = new BrowserWindow({
     width: 1280,
     height: 720,
+    minHeight: 240,
+    minWidth: 400,
     titleBarStyle: 'hiddenInset',
     webPreferences: {
-      devTools: false,
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION
     }
   })
@@ -53,14 +54,14 @@ app.on('activate', () => {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', async () => {
-  if (isDevelopment && !process.env.IS_TEST) {
+  // if (isDevelopment && !process.env.IS_TEST) {
     // Install Vue Devtools
     try {
       await installExtension(VUEJS_DEVTOOLS)
     } catch (e) {
       console.error('Vue Devtools failed to install:', e.toString())
     }
-  }
+  // }
   createWindow()
 })
 

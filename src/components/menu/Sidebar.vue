@@ -1,16 +1,16 @@
 <template>
     <div class="sidebar">
         <div class="sidebar-backdrop" @click="closeSidebarPanel" v-if="isPanelOpen"></div>
-        <transition name="slide">
+            <transition name="slide">
             <div v-if="isPanelOpen"
                  class="sidebar-panel">
                 <slot></slot>
             </div>
-        </transition>
+            </transition>
     </div>
 </template>
 <script>
-import { store, mutations } from '@/store.js'
+import { store, mutations } from '@/assets/store.js'
 
 export default {
     methods: {
@@ -23,21 +23,21 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 .slide-enter-active,
 .slide-leave-active
 {
-    transition: transform 0.2s ease;
+    transition: transform 0.5s ease;
 }
 
 .slide-enter,
 .slide-leave-to {
     transform: translateX(-100%);
-    transition: all 150ms ease-in 0s
+    transition: all 500ms ease-in 0s
 }
 
 .sidebar-backdrop {
-    background-color: rgba(0,0,0,.5);
+
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -56,5 +56,6 @@ export default {
     z-index: 999;
     padding: 3rem 20px 2rem 20px;
     width: 300px;
+    border-right:1px solid#fff;
 }
 </style>

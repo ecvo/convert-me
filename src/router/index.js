@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'Home',
     component: Home
   },
@@ -16,9 +16,14 @@ const routes = [
     component: () => import('../views/Help.vue')
   },
   {
-    path: '/choose',
-    name: 'Choose',
-    component: () => import('../views/Choose.vue')
+    path: '/upload',
+    name: 'Upload',
+    component: () => import('../views/Upload.vue')
+  },
+  {
+    path: '/download',
+    name: 'Download',
+    component: () => import('../views/Download.vue')
   }
 ]
 

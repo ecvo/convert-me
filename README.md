@@ -7,5 +7,5 @@ To build the project follow simple steps:
   2. Install [VueCLI](https://cli.vuejs.org/guide/installation.html) and [VueJS](https://vuejs.org/v2/guide/installation.html).
   3. Build app ```npm run electron:build```
 
-# Development
+ # Development
   1. Edit app ```npm run electron:serve``` 

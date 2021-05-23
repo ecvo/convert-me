@@ -1,9 +1,9 @@
 <template>
-<div class="main_page">
-  <div class="main_page_text">ConvertMe</div>
+<div class="main_page_main">
+  <div class="main_page_text">Преобразование документов</div>
   <div class="wrapper">
   <div class="link_wrapper">
-    <router-link class="main_page_link" to="/choose">Начать работу</router-link>
+    <router-link class="main_page_link" to="/upload">Начать работу</router-link>
     <div class="icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
         <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
@@ -22,48 +22,47 @@ export default {
 </script>
 
 <style>
-.main_page {
+.main_page_main {
   height: 100%;
   width: 100%;
   position: relative;
+  background: #373737;
 }
 .main_page_text {
+  display: none;
   color: #ffffff;
   font-weight: 500;
-  font-size: 5.5em;
+  font-size: 2em;
   text-align: center;
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 38%;
   left: 50%;
-  transform: translate(-50%, 100%);
+  transform: translate(-50%, -50%);
+  user-select: none;
 }
 @media (min-width: 1901px) {
 .main_page_text{
-  font-size: 7em;
+  font-size: 2em;
   }
 }
 
 @media (min-width: 1601px) and (max-width: 1920px) {
   .main_page_text{
-  font-size: 6em;
+  font-size: 2em;
   }
 }
 
 @media (min-width: 901px) and (max-width: 1600px) {
   .main_page_text{
-  font-size: 5em;
+  font-size: 2em;
   }
 }
 @media (min-width: 300px) and (max-width: 900px) {
   .main_page_text{
-  font-size: 4em;
+  font-size: 1.125em;
   }
 }
-@media (min-width: 300px) and (max-width: 900px) {
-  .main_page_text{
-  font-size: 4em;
-  }
-}
+
 @media (min-height: 400px) {
   .main_page_text {
     display: block;
