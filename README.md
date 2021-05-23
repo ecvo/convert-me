@@ -1,5 +1,5 @@
 # ConvertMe app
-Application to convert .docx files to .odt files. Developed using [VueJS](https://vuejs.org) + [Electron](https://www.electronjs.org).
+Client-side application to convert .docx files to .odt files. Developed by using [VueJS](https://vuejs.org) + [Electron](https://www.electronjs.org).
 
 # How to build project:
 To build the project follow simple steps:
@@ -9,3 +9,6 @@ To build the project follow simple steps:
 
  # Development
   1. Edit app ```npm run electron:serve``` 
+ 
+ # Working with app
+ To run this app correctly you need to download Convert-me-server repository and bound by the provisions of repository.
