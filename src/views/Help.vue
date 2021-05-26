@@ -1,22 +1,25 @@
 <template>
   <div class="help_container">
-      <div class="help_container_title">Как это работает:</div>
-      <br>
-      <div class="help_container_text">
+    <div class="help_container_title">Как это работает:</div>
+    <br />
+    <div class="help_container_text">
       <ol>
         <li>Выберите тип конвертации: docx to odt.</li>
         <li>Выберите файл который Вы хотите преобразовать в новый формат.</li>
         <li>Нажмите кнопку "Начать", чтобы начать процесс конвертации.</li>
-        <li>Нажмите кнопку "Загрузить" для сохранения архива с преобразованными файлами</li>
-        </ol>
-        </div>
+        <li>
+          После окончания процесса конвертации, вам будет предложено сохранить
+          архив с преобразованными файлами
+        </li>
+      </ol>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'Help'
-}
+  name: "Help",
+};
 </script>
 
 <style>

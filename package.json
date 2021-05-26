@@ -1,5 +1,5 @@
 {
-  "name": "ConvertMe",
+  "name": "convertme",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -18,8 +18,8 @@
     "express-fileupload": "^1.2.1",
     "jquery": "^3.6.0",
     "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
-    "zip-local": "^0.3.4"
+    "vue-burger-menu": "^2.0.5",
+    "vue-router": "^3.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

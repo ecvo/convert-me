@@ -18,52 +18,57 @@
             name="sampleFile"
             id="sampleFile"
             accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-            multiple='multiple'
+            multiple="multiple"
             required
           />
         </div>
       </div>
       <br />
-      <input type="submit" value="Начать" v-on:click="submit()" />
+      <input type="hidden" id="userId" name="userId" value="" />
+      <input type="submit" value="Начать" @click="submit()" />
     </form>
   </div>
 </template>
 
 <script>
-import $ from 'jquery';
+import $ from "jquery";
 
 export default {
-  name: 'Upload',
-  data(){
-      return {
-        sampleFile : null
+  name: "Upload",
+  data() {
+    return {
+      sampleFile: null,
+      userId: null,
+    };
+  },
+  methods: {
+    submit(event) {
+      if ($("#sampleFile").val() == "") {
+        event.preventDefault();
+      } else {
+        var code = "";
+        var possible =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        for (var i = 0; i < 5; i++)
+          code += possible.charAt(Math.floor(Math.random() * possible.length));
+        $("#userId").val(code);
+        this.$router.push("/download");
       }
     },
-    methods: {
-          submit(event){
-        if( $('#sampleFile').val() == ""){
-       event.preventDefault()
-       
-   }
-   else{
-        this.$router.push('/download')
-   }
-       }
-    },
-    mounted() {
-      $('#sampleFile').bind('change', function () {
-        var filename = $("#sampleFile").val();
-        if (/^\s*$/.test(filename)) {
-          $(".file-upload").removeClass('active');
-          $("#noFile").text("No file chosen..."); 
-        } else {
-          $(".file-upload").addClass('active');
-          $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
-  }
-});
-
-    }     
-  }
+  },
+  mounted() {
+    $("#sampleFile").bind("change", function () {
+      var filename = $("#sampleFile").val();
+      if (/^\s*$/.test(filename)) {
+        $(".file-upload").removeClass("active");
+        $("#noFile").text("No file chosen...");
+      } else {
+        $(".file-upload").addClass("active");
+        $("#noFile").text(filename.replace("C:\\fakepath\\", ""));
+      }
+    });
+  },
+};
 </script>
 
 <style>

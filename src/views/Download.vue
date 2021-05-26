@@ -1,24 +1,18 @@
 <template>
   <div class="download_container">
-    <div class="download_text_container">Преобразованный файл готов</div>
-      <form action='http://192.168.0.202:8000/download' method='get'>
-        <input type='submit' value='Загрузить' v-on:click='sumbitMain()' />
-      </form>
+    <div class="download_text_container">
+      Ваши преобразованные файлы готовы
+      <br />
+      Вам будет предложено сохранить как
+    </div>
+    <router-link to="/upload" class="btn_back">Начать заново</router-link>
   </div>
 </template>
-
 <script>
 export default {
-    name: 'Download'
-    ,
-    methods: {
-      sumbitMain() {
-        setTimeout(() => {
-          this.$router.push('/')
-        }, 5000);
-      }
-    }
-}
+  name: "Download",
+  methods: {},
+};
 </script>
 
 <style>
@@ -34,6 +28,26 @@ export default {
 .download_text_container {
   color: #ffffff;
   font-size: 1em;
-  padding: 15px;
+  padding: 0px 15px 15px 15px;
+}
+.btn_back {
+  display: block;
+  width: 360px;
+  height: 50px;
+  line-height: 45px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all 0.35s;
+}
+.btn_back:hover {
+  border: 3px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
 }
 </style>
