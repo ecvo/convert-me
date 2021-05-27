@@ -12,4 +12,4 @@ To build the project follow simple steps:
   1. Edit app ```npm run electron:serve``` 
  
  # Working with app
- To run this app correctly you need to download Convert-me-server repository and bound by the provisions of repository.
+ To run this app correctly you will need to download Convert-me-server repository and bound by the provisions of repository.
