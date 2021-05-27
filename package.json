@@ -1,6 +1,7 @@
 {
   "name": "convertme",
   "version": "1.0.0",
+  "author": "ecvo",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
