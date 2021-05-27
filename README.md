@@ -1,5 +1,6 @@
 # ConvertMe app
 Client-side application to convert .docx files to .odt files. Developed by using [VueJS](https://vuejs.org) + [Electron](https://www.electronjs.org).
+Аt the moment only Russian language inside app is available, more languages will be added soon.
 
 # How to build project:
 To build the project follow simple steps:
