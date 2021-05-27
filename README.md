@@ -5,7 +5,8 @@ Client-side application to convert .docx files to .odt files. Developed by using
 To build the project follow simple steps:
   1. Make sure that [NodeJS](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com/get-npm) installed.
   2. Install [VueCLI](https://cli.vuejs.org/guide/installation.html) and [VueJS](https://vuejs.org/v2/guide/installation.html).
-  3. Build app ```npm run electron:build```
+  3. Install ```package.json``` dependencies by typing ```npm install```
+  4. Build app ```npm run electron:build```
 
  # Development
   1. Edit app ```npm run electron:serve``` 
