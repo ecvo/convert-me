@@ -18,7 +18,6 @@ async function createWindow() {
     minHeight: 240,
     minWidth: 400,
     titleBarStyle: 'hiddenInset',
-    icon: './build/icon.png',
     webPreferences: {
       devTools: false,
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION
